@@ -1,0 +1,12 @@
+<h1>Mes Tasks</h1>
+
+<ul class="tasklist">
+  <% @tasks.each do |task| %>
+    <li>
+    <div class="bi bi-check-square"></div>
+      <%= link_to task.title, task_path(task)  %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create a task", new_task_path %>
